@@ -272,7 +272,7 @@ bolivia_clean <- unmerged(bolivia_unique_unfactor, bolivia_16_unfactor, bolivia_
 brazil_clean <- unmerged(brazil_unique_unfactor, brazil_16_unfactor, brazil_unique_factor, brazil_16_factor)
 
 #Canada
-canada_clean <- unmerged(canada_unique_unfactor, canada_16_unfactor, canada_unique_factor, canada_16_factor)
+# canada_clean <- unmerged(canada_unique_unfactor, canada_16_unfactor, canada_unique_factor, canada_16_factor)
 
 #Chile
 chile_clean <- unmerged(chile_unique_unfactor, chile_16_unfactor, chile_unique_factor, chile_16_factor)
@@ -301,7 +301,7 @@ guyana_clean <- unmerged(guyana_unique_unfactor, guyana_16_unfactor, guyana_uniq
 honduras_clean <- unmerged(honduras_unique_unfactor, honduras_16_unfactor, honduras_unique_factor, honduras_16_factor)
 
 #Jamaica
-jamaica_clean <- unmerged(jamaica_unique_unfactor, jamaica_16_unfactor, jamaica_unique_factor, jamaica_16_factor)
+# jamaica_clean <- unmerged(jamaica_unique_unfactor, jamaica_16_unfactor, jamaica_unique_factor, jamaica_16_factor)
 
 #Mexico
 mexico_clean <- unmerged(mexico_unique_unfactor, mexico_16_unfactor, mexico_unique_factor, mexico_16_factor)
@@ -322,7 +322,7 @@ peru_clean <- unmerged(peru_unique_unfactor, peru_16_unfactor, peru_unique_facto
 suriname_clean <- merged(suriname_unique_unfactor, suriname_unique_factor)
 
 #United States
-usa_clean <- unmerged(usa_unique_unfactor, usa_16_unfactor, usa_unique_factor, usa_16_factor)
+# usa_clean <- unmerged(usa_unique_unfactor, usa_16_unfactor, usa_unique_factor, usa_16_factor)
 
 #Uruguay
 uruguay_clean <- unmerged(uruguay_unique_unfactor, uruguay_16_unfactor, uruguay_unique_factor, uruguay_16_factor)
@@ -335,10 +335,15 @@ venezuela_clean <- unmerged(venezuela_unique_unfactor, venezuela_16_unfactor, ve
 ## Combining all clean versions
 Making list of all the data frames
 ```{r}
-total_clean <- list(argentina_clean, belize_clean, brazil_clean, chile_clean, bolivia_clean, canada_clean, costa_clean, ecuador_clean, elsalvador_clean, guatemala_clean, guyana_clean, honduras_clean, jamaica_clean, mexico_clean, nicaragua_clean, panama_clean, paraguay_clean, peru_clean, suriname_clean, uruguay_clean, usa_clean, venezuela_clean)
+total_clean <- list(argentina_clean, belize_clean, brazil_clean, chile_clean, bolivia_clean, costa_clean, ecuador_clean, elsalvador_clean, guatemala_clean, guyana_clean, honduras_clean, mexico_clean, nicaragua_clean, panama_clean, paraguay_clean, peru_clean, suriname_clean, uruguay_clean, venezuela_clean)
 
 #colombia_clean not resolved
 ```
+# ```{r}
+# total_clean <- list(argentina_clean, belize_clean, brazil_clean, chile_clean, bolivia_clean, canada_clean, costa_clean, ecuador_clean, elsalvador_clean, guatemala_clean, guyana_clean, honduras_clean, jamaica_clean, mexico_clean, nicaragua_clean, panama_clean, paraguay_clean, peru_clean, suriname_clean, uruguay_clean, usa_clean, venezuela_clean)
+# 
+# #colombia_clean not resolved
+# ```
 
 
 

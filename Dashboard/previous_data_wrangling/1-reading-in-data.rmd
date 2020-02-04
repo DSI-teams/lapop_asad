@@ -65,129 +65,129 @@ If you want to change the files that are being read in, you can either make a ne
 
 ## Creating factored dataframes using `factor_country`
 ```{r}
-argentina_factor <- factor_country("data/merged_argentina_2008_2014.zip")
+argentina_factor <- factor_country("data/merged_argentina_2008_2014.dta")
 
 belize_factor <- factor_country("data/merged_belize_2008_2014.dta")
 
-bolivia_factor <- factor_country("data/merged_bolivia_2004_2014.zip")
+bolivia_factor <- factor_country("data/merged_bolivia_2004_2014.dta")
 
-brazil_factor <- factor_country("data/merged_brazil_2007_2014.zip") %>% 
+brazil_factor <- factor_country("data/merged_brazil_2007_2014.dta") %>% 
   #Correcting for inconsistencies in spelling
   mutate(pais_factor = recode(pais_factor, Brasil = "Brazil"))
 
-canada_factor <- factor_country("data/merged_canada_2006_2017.dta") %>% 
-  #Correcting for inconsistencies in accents
-  mutate(pais_factor = recode(pais_factor, Canadá = "Canada")) %>% 
-  #Fixing inconsistency
-  rename(idnum_14_factor = idnum_1416_factor)
+# canada_factor <- factor_country("data/merged_canada_2006_2017.dta") %>% 
+#   #Correcting for inconsistencies in accents
+#   mutate(pais_factor = recode(pais_factor, Canadá = "Canada")) %>% 
+#   #Fixing inconsistency
+#   rename(idnum_14_factor = idnum_1416_factor)
 
-chile_factor <- factor_country("data/merged_chile_2006_2014.zip")
+chile_factor <- factor_country("data/merged_chile_2006_2014.dta")
 
-colombia_factor <- factor_country("data/merged_colombia_2004_2014.zip")
+colombia_factor <- factor_country("data/merged_colombia_2004_2014.dta")
 
-costa_factor <- factor_country("data/merged_costa_rica_2004_2014.zip")
+costa_factor <- factor_country("data/merged_costa_rica_2004_2014.dta")
 
-ecuador_factor <- factor_country("data/merged_ecuador_2004_2014.zip")
+ecuador_factor <- factor_country("data/merged_ecuador_2004_2014.dta")
 
-elsalvador_factor <- factor_country("data/merged_el_salvador_2004_2014.zip")
+elsalvador_factor <- factor_country("data/merged_el_salvador_2004_2014.dta")
 
-guatemala_factor <- factor_country("data/merged_guatemala_2004_2014.zip")
+guatemala_factor <- factor_country("data/merged_guatemala_2004_2014.dta")
 
 guyana_factor <- factor_country("data/merged_guyana_2006_2014.dta")
 
 #haiti_factor <- factor_country("data/merged_haiti_2006_2014.zip")
 
-honduras_factor <- factor_country("data/merged_honduras_2004_2014.zip")
+honduras_factor <- factor_country("data/merged_honduras_2004_2014.dta")
 
-jamaica_factor <- factor_country("data/merged_jamaica_2006_2017.dta") %>% 
-  #Fixing inconsistency
-  rename(idnum_14_factor = idnum_1416_factor)
+# jamaica_factor <- factor_country("data/merged_jamaica_2006_2017.dta") %>% 
+#   #Fixing inconsistency
+#   rename(idnum_14_factor = idnum_1416_factor)
 
-mexico_factor <- factor_country("data/merged_mexico_2004_2014.zip") %>% 
+mexico_factor <- factor_country("data/merged_mexico_2004_2014.dta") %>% 
   #Correcting for inconsistencies in accents
   mutate(pais_factor = recode(pais_factor, México = "Mexico"))
 
-nicaragua_factor <- factor_country("data/merged_nicaragua_2004_2014.zip")
+nicaragua_factor <- factor_country("data/merged_nicaragua_2004_2014.dta")
 
-panama_factor <- factor_country("data/merged_panama_2004_2014.zip") %>% 
+panama_factor <- factor_country("data/merged_panama_2004_2014.dta") %>% 
   #Correcting for inconsistencies in accents
   mutate(pais_factor = recode(pais_factor, Panamá = "Panama"))
 
-paraguay_factor <- factor_country("data/merged_paraguay_2006_2014.zip")
+paraguay_factor <- factor_country("data/merged_paraguay_2006_2014.dta")
 
-peru_factor <- factor_country("data/merged_peru_2006_2014.zip") %>% 
+peru_factor <- factor_country("data/merged_peru_2006_2014.dta") %>% 
   #Correcting for inconsistencies in accents
   mutate(pais_factor = recode(pais_factor, Perú = "Peru"))
 
-suriname_factor <- factor_country("data/merged_suriname_2010_2014.zip")
+suriname_factor <- factor_country("data/merged_suriname_2010_2014.dta")
 
-usa_factor <- factor_country("data/merged_united_states_2006_2017.dta") %>% 
-  #Correcting for inconsistencies in spelling
-  mutate(pais_factor = recode(pais_factor, "Estados Unidos" = "United States")) %>% 
-  #Fixing inconsistency
-  rename(idnum_14_factor = idnum_1416_factor)
+# usa_factor <- factor_country("data/merged_united_states_2006_2017.dta") %>% 
+#   #Correcting for inconsistencies in spelling
+#   mutate(pais_factor = recode(pais_factor, "Estados Unidos" = "United States")) %>% 
+#   #Fixing inconsistency
+#   rename(idnum_14_factor = idnum_1416_factor)
 
-uruguay_factor <- factor_country("data/merged_uruguay_2007_2014.zip")
+uruguay_factor <- factor_country("data/merged_uruguay_2007_2014.dta")
 
-venezuela_factor <- factor_country("data/merged_venezuela_2007_2014.zip")
+venezuela_factor <- factor_country("data/merged_venezuela_2007_2014.dta")
 ```
 
 ## Creating unfactored dataframes using `read_dta`
 This is where we read in the unfactored data.
 ```{r}
-argentina_unfactor <- read_dta("data/merged_argentina_2008_2014.zip")
+argentina_unfactor <- read_dta("data/merged_argentina_2008_2014.dta")
 
 belize_unfactor <- read_dta("data/merged_belize_2008_2014.dta")
 
-bolivia_unfactor <- read_dta("data/merged_bolivia_2004_2014.zip")
+bolivia_unfactor <- read_dta("data/merged_bolivia_2004_2014.dta")
 
-brazil_unfactor <- read_dta("data/merged_brazil_2007_2014.zip")
+brazil_unfactor <- read_dta("data/merged_brazil_2007_2014.dta")
 
-canada_unfactor <- read_dta("data/merged_canada_2006_2017.dta") %>% 
-  #Fixing inconsistency
-  rename(idnum_14 = idnum_1416)
+# canada_unfactor <- read_dta("data/merged_canada_2006_2017.dta") %>% 
+#   #Fixing inconsistency
+#   rename(idnum_14 = idnum_1416)
 
-chile_unfactor <- read_dta("data/merged_chile_2006_2014.zip")
+chile_unfactor <- read_dta("data/merged_chile_2006_2014.dta")
 
-colombia_unfactor <- read_dta("data/merged_colombia_2004_2014.zip")
+colombia_unfactor <- read_dta("data/merged_colombia_2004_2014.dta")
 
-costa_unfactor <- read_dta("data/merged_costa_rica_2004_2014.zip")
+costa_unfactor <- read_dta("data/merged_costa_rica_2004_2014.dta")
 
-ecuador_unfactor <- read_dta("data/merged_ecuador_2004_2014.zip")
+ecuador_unfactor <- read_dta("data/merged_ecuador_2004_2014.dta")
 
-elsalvador_unfactor <- read_dta("data/merged_el_salvador_2004_2014.zip")
+elsalvador_unfactor <- read_dta("data/merged_el_salvador_2004_2014.dta")
 
-guatemala_unfactor <- read_dta("data/merged_guatemala_2004_2014.zip")
+guatemala_unfactor <- read_dta("data/merged_guatemala_2004_2014.dta")
 
 guyana_unfactor <- read_dta("data/merged_guyana_2006_2014.dta")
 
 #haiti_unfactor <- read_dta("data/merged_haiti_2006_2014.zip")
 
-honduras_unfactor <- read_dta("data/merged_honduras_2004_2014.zip")
+honduras_unfactor <- read_dta("data/merged_honduras_2004_2014.dta")
 
-jamaica_unfactor <- read_dta("data/merged_jamaica_2006_2017.dta") %>% 
-  #Fixing inconsistency
-  rename(idnum_14 = idnum_1416)
+# jamaica_unfactor <- read_dta("data/merged_jamaica_2006_2017.dta") %>% 
+#   #Fixing inconsistency
+#   rename(idnum_14 = idnum_1416)
 
-mexico_unfactor <- read_dta("data/merged_mexico_2004_2014.zip")
+mexico_unfactor <- read_dta("data/merged_mexico_2004_2014.dta")
 
-nicaragua_unfactor <- read_dta("data/merged_nicaragua_2004_2014.zip")
+nicaragua_unfactor <- read_dta("data/merged_nicaragua_2004_2014.dta")
 
-panama_unfactor <- read_dta("data/merged_panama_2004_2014.zip")
+panama_unfactor <- read_dta("data/merged_panama_2004_2014.dta")
 
-paraguay_unfactor <- read_dta("data/merged_paraguay_2006_2014.zip")
+paraguay_unfactor <- read_dta("data/merged_paraguay_2006_2014.dta")
 
-peru_unfactor <- read_dta("data/merged_peru_2006_2014.zip")
+peru_unfactor <- read_dta("data/merged_peru_2006_2014.dta")
 
-suriname_unfactor <- read_dta("data/merged_suriname_2010_2014.zip")
+suriname_unfactor <- read_dta("data/merged_suriname_2010_2014.dta")
 
-usa_unfactor <- read_dta("data/merged_united_states_2006_2017.dta") %>% 
-  #Fixing inconsistency
-  rename(idnum_14 = idnum_1416)
+# usa_unfactor <- read_dta("data/merged_united_states_2006_2017.dta") %>% 
+#   #Fixing inconsistency
+#   rename(idnum_14 = idnum_1416)
 
-uruguay_unfactor <- read_dta("data/merged_uruguay_2007_2014.zip")
+uruguay_unfactor <- read_dta("data/merged_uruguay_2007_2014.dta")
 
-venezuela_unfactor <- read_dta("data/merged_venezuela_2007_2014.zip")
+venezuela_unfactor <- read_dta("data/merged_venezuela_2007_2014.dta")
 ```
 
 
@@ -230,10 +230,10 @@ brazil_16_factor  <- factor16_country("data/2016_brazil.dta") %>%
   mutate(pais_factor = recode(pais_factor, Brasil = "Brazil")) %>% 
   assert(is_uniq, person_id_factor)
 
-canada_16_factor  <- factor16_country("data/2016_canada.dta") %>% 
-  #Correcting for inconsistencies in accents
-  mutate(pais_factor = recode(pais_factor, Canadá = "Canada")) %>% 
-  assert(is_uniq, person_id_factor)
+# canada_16_factor  <- factor16_country("data/2016_canada.dta") %>% 
+#   #Correcting for inconsistencies in accents
+#   mutate(pais_factor = recode(pais_factor, Canadá = "Canada")) %>% 
+#   assert(is_uniq, person_id_factor)
 
 chile_16_factor  <- factor16_country("data/2016_chile.dta") %>% 
   assert(is_uniq, person_id_factor)
@@ -263,8 +263,8 @@ guyana_16_factor  <- factor16_country("data/2016_guyana.dta") %>%
 honduras_16_factor  <- factor16_country("data/2016_honduras.dta") %>% 
   assert(is_uniq, person_id_factor)
 
-jamaica_16_factor  <- factor16_country("data/2016_jamaica.dta") %>% 
-  assert(is_uniq, person_id_factor)
+# jamaica_16_factor  <- factor16_country("data/2016_jamaica.dta") %>% 
+#   assert(is_uniq, person_id_factor)
 
 mexico_16_factor  <- factor16_country("data/2016_mexico.dta") %>% 
   mutate(pais_factor = recode(pais_factor, México = "Mexico")) %>% 
@@ -284,10 +284,10 @@ peru_16_factor  <- factor16_country("data/2016_peru.dta") %>%
   mutate(pais_factor = recode(pais_factor, Perú = "Peru")) %>% 
   assert(is_uniq, person_id_factor)
 
-usa_16_factor  <- factor16_country("data/2016_united_states.dta") %>% 
-  #Correcting for inconsistencies in spelling
-  mutate(pais_factor = recode(pais_factor, "Estados Unidos" = "United States")) %>% 
-  assert(is_uniq, person_id_factor)
+# usa_16_factor  <- factor16_country("data/2016_united_states.dta") %>% 
+#   #Correcting for inconsistencies in spelling
+#   mutate(pais_factor = recode(pais_factor, "Estados Unidos" = "United States")) %>% 
+#   assert(is_uniq, person_id_factor)
 
 uruguay_16_factor  <- factor16_country("data/2016_uruguay.dta") %>% 
   assert(is_uniq, person_id_factor)
@@ -316,17 +316,17 @@ brazil_16_unfactor  <- read_dta("data/2016_brazil.dta") %>%
   assert(is_uniq, person_id) %>% 
   transform(person_id = as.character(person_id))
 
-canada_16_unfactor  <- read_dta("data/2016_canada.dta") %>% 
-  rename(person_id = uniq_id) %>% 
-  assert(is_uniq, person_id) %>% 
-  transform(person_id = as.character(person_id))
+# canada_16_unfactor  <- read_dta("data/2016_canada.dta") %>% 
+#   rename(person_id = uniq_id) %>% 
+#   assert(is_uniq, person_id) %>% 
+#   transform(person_id = as.character(person_id))
 
 chile_16_unfactor  <- read_dta("data/2016_chile.dta") %>% 
   rename(person_id = uniq_id) %>% 
   assert(is_uniq, person_id) %>% 
   transform(person_id = as.character(person_id))
 
-colombia_16_unfactor  <- read_dta("data/2016_chile.dta") %>% 
+colombia_16_unfactor  <- read_dta("data/2016_colombia.dta") %>% 
   rename(person_id = uniq_id) %>% 
   assert(is_uniq, person_id) %>% 
   transform(person_id = as.character(person_id))
@@ -361,10 +361,10 @@ honduras_16_unfactor  <- read_dta("data/2016_honduras.dta") %>%
   assert(is_uniq, person_id) %>% 
   transform(person_id = as.character(person_id))
 
-jamaica_16_unfactor  <- read_dta("data/2016_jamaica.dta") %>% 
-  rename(person_id = uniq_id) %>% 
-  assert(is_uniq, person_id) %>% 
-  transform(person_id = as.character(person_id))
+# jamaica_16_unfactor  <- read_dta("data/2016_jamaica.dta") %>% 
+#   rename(person_id = uniq_id) %>% 
+#   assert(is_uniq, person_id) %>% 
+#   transform(person_id = as.character(person_id))
 
 mexico_16_unfactor  <- read_dta("data/2016_mexico.dta") %>% 
   rename(person_id = uniq_id) %>% 
@@ -391,10 +391,10 @@ peru_16_unfactor  <- read_dta("data/2016_peru.dta") %>%
   assert(is_uniq, person_id) %>% 
   transform(person_id = as.character(person_id))
 
-usa_16_unfactor  <- read_dta("data/2016_united_states.dta") %>% 
-  rename(person_id = uniq_id) %>% 
-  assert(is_uniq, person_id) %>% 
-  transform(person_id = as.character(person_id))
+# usa_16_unfactor  <- read_dta("data/2016_united_states.dta") %>% 
+#   rename(person_id = uniq_id) %>% 
+#   assert(is_uniq, person_id) %>% 
+#   transform(person_id = as.character(person_id))
 
 uruguay_16_unfactor  <- read_dta("data/2016_uruguay.dta") %>% 
   rename(person_id = uniq_id) %>% 
